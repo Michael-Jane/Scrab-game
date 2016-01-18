@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="scrab.css" type="text/css" />
+<link rel="stylesheet" href="css/ui-dark.css" type="text/css" />
+
+<script type="text/javascript" src="js/base.js" ></script>
+<script type="text/javascript" src="js/ui.js" ></script>
+<script type="text/javascript" src="scrab.js" ></script>
+</head>
+
+<body>
+
+
+<div class="box">
+    <button id="shuffle" class="action secondary">Shuffle tiles</button>
+    <button id="removeSelected" class="action secondary">Remove selected tile</button>
+    <button id="swapSelected" class="action secondary">Swap selected tile</button>
+    <button id="addTile" class="action secondary">Add tile</button>
+    <br />
+    <div id="tileTemplate" data-win-control="WinJS.Binding.Template">
+        <div class="tileTempl">
+            <h6 class="counter" data-win-bind="innerText: counter"></h6>
+            <h1 class="letter" data-win-bind="innerText: letter"></h1>
+        </div>
+    </div>
+    <div id="listView2" class="listBox" data-win-control="WinJS.UI.ListView" data-win-options="{
+        selectionMode: 'multi',
+        tapBehavior: WinJS.UI.TapBehavior.toggleSelect,
+        itemsReorderable: true,
+        layout: { type: WinJS.UI.GridLayout, maxRows: 1 }
+    }"></div>
+</div>
+
+</body>
+</html>
